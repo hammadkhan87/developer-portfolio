@@ -9,8 +9,8 @@ import { ThemeContext } from '../../contexts/theme-context';
 function BlogPage() {
     const [search, setSearch] = useState('')
     const { theme } = useContext(ThemeContext);
-
-    const filteredArticles = blogData.filter((blog) => {
+     const blogData =[]
+    const filteredArticles = blogData?.filter((blog) => {
         const content = blog.title + blog.description + blog.date
         return content.toLowerCase().includes(search.toLowerCase())
     })
