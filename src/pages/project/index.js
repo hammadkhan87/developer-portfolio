@@ -5,13 +5,13 @@ import { AiOutlineHome } from "react-icons/ai";
 import { SingleProject } from '../../components';
 import Link from '../../components/link';
 import { ThemeContext } from '../../contexts/theme-context';
-import { projectsData } from '../../data/projectsData';
+//import { projectsData } from '../../data/projectsData';
 
 function ProjectPage() {
     const [search, setSearch] = useState('')
     const { theme } = useContext(ThemeContext);
-
-    const filteredArticles = projectsData.filter((project) => {
+    const projectsData =[]
+    const filteredArticles = projectsData?.filter((project) => {
         const content = project.projectName + project.projectDesc + project.tags
         return content.toLowerCase().includes(search.toLowerCase())
     })
