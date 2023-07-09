@@ -4,7 +4,7 @@ import { ThemeContext } from '../../contexts/theme-context';
 import styles from '../../styles/blog.module.css';
 import Link from '../link';
 import SingleBlog from './blog-card/blog-card';
-
+    
 
 function Blog({blogs}) {
 
